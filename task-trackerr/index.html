@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+  <button class="theme-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path fill="white" d="M12 2a9.931 9.931 0 0 1 8.062 4.21C18.484 6.354 16.5 6 15 6 8.924 6 4 10.924 4 17c0 1.47.355 2.857 1.79 3.94C3.844 19.082 2 15.667 2 12c0-5.523 4.477-10 10-10zM7 17a5 5 0 1 1 9 3.88A9.94 9.94 0 0 1 7 17z" />
+      </svg>
+  </button>
+
+  <div class="task-tracker">
+      <h2>Task Tracker</h2>
+      <div class="task-input">
+          <input type="text" id="taskInput" placeholder="Start writing and press enter to create task">
+          <button id="addTaskBtn">Add Task</button>
+      </div>
+      <ul class="task-list" id="taskList"></ul>
+  </div>
+  <script src="main.js"></script>
+</body>
+  </html>

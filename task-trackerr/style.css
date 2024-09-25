@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(145deg, rgba(11, 17, 32, 1), rgba(45, 39, 53, 0.7)), url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-size: cover;
+  transition: background-color 0.3s ease;
+}
+
+.theme-light {
+  background: linear-gradient(145deg, rgba(255, 190, 88, 0.7), rgba(255, 255, 255, 0.7)), url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-size: cover;
+}
+
+.task-tracker {
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.theme-dark .task-tracker {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.theme-light .task-tracker {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.task-tracker h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.theme-dark .task-tracker h2 {
+  color: white;
+}
+
+.theme-light .task-tracker h2 {
+  color: #333;
+}
+
+.task-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-input input {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.task-input button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.task-item svg {
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.delete-btn:hover svg {
+  fill: red;
+}
+
+/* Toggle button for light/dark mode */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.theme-dark .theme-toggle {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-light .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.theme-light .task-item {
+  color: #333;
+}
+
+.theme-dark .task-item {
+  color: white;
+}
